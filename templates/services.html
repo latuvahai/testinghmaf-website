@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-/Qb5ZzfB5ltjgWWcUsxIE9+9ySgjWIIQhGopw/j0+/oDj4Y4d4f8/wtjLxAbOuOixT8ISlEUPJj/wDdqctw/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>His Majesty's Armed Forces</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujslaf5xM7XSr88+zkk+5DlFm4z4ujLg4yWp6YIK+0t+J" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9Md+9x" crossorigin="anonymous"></script>
+</head>
+
+
+<body class="services-page">
+
+  <!-- Navbar -->
+<nav class="navbar navbar-default custom-navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="../static/img/logo.jpg" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ url_for('careers') }}">Careers & Jobs</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="#">News and Events</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right languages">
+        <li><a href="{{ url_for('index') }}">English</a></li>
+        <li><a href="{{ url_for('tongan') }}">Tongan</a></li>
+      </ul>
+<form class="navbar-form navbar-right" role="search" action="/search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search" name="q">
+  </div>
+  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+</form>
+
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero section -->
+<div class="page-wrapper">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>HMAF consists of several units responsible for defending the country's borders, conducting operations at sea, providing logistical support, and protecting the monarchy and people of Tonga</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+  </div>
+
+  <!-- Services sections -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h2>Land Force</h2>
+        <img src="../static/img/service1.jpg" alt="Service 1" class="service-img">
+        <p>The Land Force is responsible for ground-based military operations. It consists of soldiers who are trained to use a variety of weapons and equipment to defend the nation's interests and support national security objectives. The Land Force plays a crucial role in defending the country's borders, assisting civil authority in local matters, and providing humanitarian assistance and disaster relief in times of crisis.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
+      <div class="col-sm-3">
+        <h2>Royal Navy</h2>
+        <img src="../static/img/service2.jpg" alt="Service 2" class="service-img">
+        <p>The Navy is responsible for conducting maritime operations, including both defensive and offensive operations at sea. It consists of sailors who operate patrol boats, landing crafts and small boats to protect the country's interests. The Navy's mission includes maintaining freedom of the seas, safeguarding shipping lanes, and providing humanitarian assistance and disaster relief in coastal areas.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
+      <div class="col-sm-3">
+        <h2>Royal Guards</h2>
+        <img src="../static/img/service3.jpg" alt="Service 3" class="service-img">
+        <p>The Royal Guards are responsible for protecting the monarch and other members of the royal family. They are typically highly trained and specialized soldiers who are entrusted with safeguarding the royal family and their residences, as well as important national landmarks and institutions. In addition to their protective duties, the Royal Guards also participate in ceremonial events and perform other tasks as directed by the King.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
+      <div class="col-sm-3">
+        <h2>Support</h2>
+        <img src="../static/img/service4.jpg" alt="Service 4" class="service-img">
+        <p>The Support Unit provide logistical support to HMAF operations by providing supplies, equipment, and services to the organizations. It encompasses everything from transportation and storage to maintenance and repair, and ensures that troops have the resources they need to accomplish their missions.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
+    </div>
+  </div>
+    </div>
+<!-- Footer section -->
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 text-left">
+      <a class="footer-logo" href="#">
+        <img src="../static/img/logo.jpg" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+    <div class="col-sm-4">
+      <h3>Upcoming Events</h3>
+      <ul class="footer-links">
+        <li><a href="event1.html">Event 1</a></li>
+        <li><a href="event2.html">Event 2</a></li>
+        <li><a href="event3.html">Event 3</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-left">How to Reach Us</h3>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Phone: (676) 23-099</p>
+          <p>Email: info@hmaf.gov.to</p>
+          <p><a href="https://www.facebook.com" target="_blank">Facebook </a>
+          <a href="https://twitter.com" target="_blank">Twitter </a>
+          <a href="https://www.instagram.com" target="_blank">Instagram </a>
+          <a href="https://www.tiktok.com" target="_blank">TikTok </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="row">
+    <!-- content here -->
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <div class="row">
+    <!-- footer content here -->
+  </div>
+</footer>
+
+<div class="container" style="margin-bottom: 20px;"> <!-- adjust as needed -->
+  <div class="row">
+    <!-- content below footer here -->
+  </div>
+</div>
+
+</footer>
+
+
+
+
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>His Majesty's Armed Forces</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/X+Lb+2PRKzU8dUs/8/50t32I6f/LurBLK0f8Dc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+<header>
+  <nav class="custom-navbar navbar-expand-lg navbar-light bg-light">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#"><img src="../static/img/logo2.gif" alt="Logo"></a>
+      </div>
+      <div class="menu-items navbar-nav">
+        <ul>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-hamburger" href="#" role="button" id="hamburgerButton" aria-expanded="false">
+              <i class="bi bi-list"></i>
+              <i class="bi bi-x" style="display: none;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="d-flex align-items-center ms-auto">
+          <form class="navbar-form search-form me-3" role="search" action="/search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="q">
+              <button type="submit" class="btn btn-outline-light">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <div class="language-options">
+            <a href="#" class="me-2">English</a>
+            <a href="{{ url_for('tongan_index') }}">Tongan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- Slideout Menu -->
+<div class="slideout-menu">
+  <ul class="slideout-menu-list">
+    <li class="nav-item">
+      <a href="#" class="nav-link">ABOUT US</a>
+        <div class="sub-menu-container" id="about-us-submenu">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service1.jpg" alt="Mission">
+                            <a href="#" class="nav-link">Mission</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service2.jpg" alt="History">
+                            <a href="#" class="nav-link">History</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service3.jpg" alt="Organization">
+                            <a href="#" class="nav-link">Organization</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service4.jpg" alt="Leadership">
+                            <a href="#" class="nav-link">Leadership</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">CAREERS</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career1.jpg" alt="Commissioned Officers">
+                            <a href="#" class="nav-link">Commissioned Officers</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career2.jpg" alt="Enlisted">
+                            <a href="#" class="nav-link">Enlisted</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career3.jpg" alt="Specialists">
+                            <a href="#" class="nav-link">Specialists</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career4.jpg" alt="Civilians">
+                            <a href="#" class="nav-link">Civilians</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">SERVICES</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo1.png" alt="Tonga Royal Guards">
+                            <a href="#" class="nav-link">Tonga Royal Guards</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo2.png" alt="Land Force">
+                            <a href="#" class="nav-link">Land Force</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo3.png" alt="Tonga Royal Navy">
+                            <a href="#" class="nav-link">Tonga Royal Navy</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo4.png" alt="Air Wing">
+                            <a href="#" class="nav-link">Air Wing</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  <li class="nav-item">
+      <a href="#" class="nav-link">HOW TO JOIN</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent.jpg" alt="Requirement">
+                            <a href="#" class="nav-link">Requirement</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent2.jpg" alt="How To Prepare">
+                            <a href="#" class="nav-link">How to Prepare</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi.jpg" alt="How to Contact Us">
+                            <a href="#" class="nav-link">How To Contact Us</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi2.png" alt="Fill the Form">
+                            <a href="{{ url_for('join_us') }}">Fill the Form</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  </ul>
+</div>
+<section class="video-container">
+    <video controls autoplay loop muted>
+        <source src="../static/vdo/tafakula.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-text">
+        <h1>Be the Change, Join the Ranks</h1>
+    </div>
+</section>
+
+<div class="my-container text-center">
+  <h2 class="title-large">HIS MAJESTY'S ARMED FORCES</h2>
+  <h4>TERRA MARIQUE</h4>
+  <img src="../static/img/logo2.gif" alt="Logo">
+  <p>Welcome to the official website of His Majesty's Armed Forces of the Kingdom of Tonga. The Mission of His Majesty's Armed Forces is to defend the Kingdom against external threats, provide protection for our sovereignty, including our territorial waters, and support civil authorities in creating a secure and peaceful environment to enhance the social, economic, and political development of the Kingdom.</p>
+</div>
+
+<div class="highlights-section">
+  <h2 class="title-highlight">HIGHLIGHTS</h2>
+  <div class="row">
+    <div class="col-md-4 highlight-item">
+      <a href="link-1.html">
+        <div class="highlight-image-container">
+          <img src="../static/img/career1.jpg" alt="Image 1" class="highlight-image">
+        <div class="highlight-text">Soldier of the Year</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-2.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/career2.jpg" alt="Image 2" class="highlight-image">
+        <div class="highlight-text">Tafakula Exercise</div>
+         </div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-3.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/career4.jpg" alt="Image 3" class="highlight-image">
+        <div class="highlight-text">Officer Cadet Toki Graduated OCS</div>
+         </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="cta-container">
+    <a href="{{ url_for('news') }}" class="cta-button">Read More News</a>
+  </div>
+</div>
+<div class="highlights-section">
+  <h2 class="title-highlight">ARE YOU INTERESTED IN JOINING US?</h2>
+  <div class="row">
+    <div class="col-md-4 highlight-item">
+      <a href="link-1.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/trg1.jpg" alt="Image 1" class="highlight-image">
+              </div>
+        <div class="highlight-text">Join the Tonga Royal Guards.</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-2.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/rtm1.jpg" alt="Image 2" class="highlight-image">
+              </div>
+        <div class="highlight-text">Join the Royal Tongan Marines</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-3.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/navy1.jpg" alt="Image 3" class="highlight-image">
+              </div>
+        <div class="highlight-text">Join the Royal Tongan Navy</div>
+      </a>
+    </div>
+  </div>
+  <div class="cta-container">
+    <a href="{{ url_for('careers') }}" class="cta-button">Find Your Career</a>
+  </div>
+</div>
+
+<section class="video-container">
+  <div class="video-overlay"></div>
+  <video controls autoplay loop muted>
+    <source src="../static/vdo/rimpac.mp4" type="video/mp4">
+  </video>
+  <div class="video-text">
+    <h1>Path to Your Career</h1>
+    <p>Let us guide you towards achieving your goals.</p>
+    <a href="#" class="btn btn-primary">Learn More</a>
+  </div>
+</section>
+<div class="highlights-section">
+  <h2 class="title-highlight"></h2>
+  <div class="row">
+    <div class="col-md-4 highlight-item">
+      <a href="link-1.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/recruit.jpg" alt="Image 1" class="highlight-image">
+              </div>
+        <div class="highlight-text">What are the requirements.</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-2.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/recruit1.jpg" alt="Image 2" class="highlight-image">
+              </div>
+        <div class="highlight-text">How to Prepare</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-3.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/partnership2.jpg" alt="Image 3" class="highlight-image">
+              </div>
+        <div class="highlight-text">Frequently Asked Questions</div>
+      </a>
+    </div>
+  </div>
+  <div class="cta-container">
+    <a href="{{ url_for('join_us') }}" class="cta-button">Fill this Form</a>
+  </div>
+</div>
+<!--Footer--!>
+
+<footer class="bg-dark text-white py-3 mt-5">
+  <div class="container">
+    <div class="row footer-row">
+      <div class="col-md-4 text-right">
+        <img src="../static/img/logo2.gif" alt="Logo" class="footer-logo">
+        <p class="footer-address">
+          His Majesty's Armed Forces<br>
+          Vilai Barracks<br>
+          Vaha'akolo Road<br>
+          Nuku'alofa, Tonga
+        </p>
+      </div>
+      <div class="col-md-4 text-center.">
+        <h3 class="footer-title">Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">How to Join</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-right">
+        <h3 class="footer-title">Connect with Us</h3>
+        <p>Phone Number: (676) 23-099</p>
+        <p>Email: info@hmaf.gov.to</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row footer-bottom-row mt-3">
+  <div class="col-md-12 text-center">
+    <p>&copy; <span id="current-year"></span> His Majesty's Armed Forces. All rights reserved.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Terms of Use</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</footer>
+
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+<!-- For the current year in the copyright section at the footer -->
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Add these lines right before the closing </body> tag -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+  function updateSubmenuDisplay() {
+    if ($(window).width() <= 991.98) {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "flex");
+    } else {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "none");
+    }
+  }
+
+  $("#hamburgerButton").on("click", function () {
+    var slideoutMenu = $(".slideout-menu");
+    var listIcon = $(this).find(".bi-list");
+    var xIcon = $(this).find(".bi-x");
+
+    listIcon.toggle();
+    xIcon.toggle();
+    slideoutMenu.toggleClass("active");
+
+    if (slideoutMenu.hasClass("active")) {
+      slideoutMenu.css("display", "block");
+    } else {
+      setTimeout(function() {
+        slideoutMenu.css("display", "none");
+      }, 300);
+    }
+  });
+
+  $(".nav-item").hover(
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "flex");
+      }
+    },
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "none");
+      }
+    }
+  );
+});
+
+$(document).ready(function() {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+$(window).on("resize load", function() {
+  updateSubmenuDisplay();
+});
+
+</script>
+
+</body>
+</html>

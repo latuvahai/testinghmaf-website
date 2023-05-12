@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-P8i/ONoTdgRyT1QzFUpku+n/1Q2S57ZS15PZkNlXn4DlNt4yAtgH4lLUWWxmkdKQwjS+WyoPhHEGtbTXpW8XJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../static/css/newindex.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>His Majesty's Armed Forces</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/X+Lb+2PRKzU8dUs/8/50t32I6f/LurBLK0f8Dc" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7M5/6f6tD8RZ+BEISR3q37u2//XpuD16g5v7KDSy5rgd" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha384-U7v7z8lIybr6uxlR2PZ2f+np7gc9MQ9zmqAymo0LE2KEii5TI5RWKfpl/3Uq3Md4" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="index-page">
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg bg-light navbar-default custom-navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="../static/img/logo2.gif" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="nav navbar-nav">
+    <li><a href="#">Home</a></li>
+<li class="dropdown custom-dropdown">
+  <a href="{{ url_for('about_us') }}" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+  <ul class="dropdown-menu about-us">
+    <li><a href="#"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Overview</h4></a></li>
+    <li><a href="{{ url_for('mission') }}"><img src="../static/img/career1.jpg" alt="Image 2"><h4>Mission</h4></a></li>
+    <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 3"><h4>Organization</h4></a></li>
+    <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 4"><h4>Leadership</h4></a></li>
+  </ul>
+</li>
+
+<li class="dropdown custom-dropdown">
+      <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="{{ url_for('careers') }}"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Careers & Jobs</h4></a></li>
+        <li><a href="{{ url_for('services') }}"><img src="../static/img/career1.jpg" alt="Image 1"><h4>Services</h4></a></li>
+        <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 1"><h4>News & Events</h4></a></li>
+        <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 1"><h4>Contact</h4></a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav me-auto mb-2 mb-lg-0 navbar-right languages">
+    <li><a href="{{ url_for('index') }}">English</a></li>
+    <li><a href="{{ url_for('tongan') }}">Tongan</a></li>
+  </ul>
+  <form class="navbar-form navbar-right" role="search" action="/search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" name="q">
+    </div>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+  </form>
+</div>
+
+</nav>
+
+<!-- Hero section -->
+<div class="page-wrapper">
+<div class="jumbotron">
+  <video src="../static/vdo/rimpac.mp4" type="video/mp4" width="100%" height="auto" autoplay loop muted="muted" ></video>
+
+  <div class="container">
+    <h1>Join the Mission, Make a Difference.</h1>
+    <p>We are committed to serving the people of Tonga with honor.</p>
+    <p><a class="btn btn-primary btn-lg" href="{{ url_for('careers') }}" role="button">Learn more</a></p>
+  </div>
+</div>
+
+<!-- Additional Section -->
+<div class="my-container text-center">
+  <h2>HIS MAJESTY'S ARMED FORCES</h2>
+  <h4>TERRA MARIQUE</h4>
+  <img src="../static/img/logo2.gif" alt="Logo">
+  <p>Welcome to the official website of His Majesty's Armed Forces of the Kingdom of Tonga. The Mission of His Majesty's Armed Forces is to defend the Kingdom against external threats, provide protection for our sovereignty, including our territorial waters, and support civil authorities in creating a secure and peaceful environment to enhance the social, economic, and political development of the Kingdom.</p>
+</div>
+<!-- Additional Section -->
+<div class="container text-center">
+  <h2>NEWS and EVENTS</h2>
+</div>
+
+<!-- Additional sections -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+
+  <img src="../static/img/exrimpac.jpg" alt="Service 1" class="service-img">
+  <a href="#"><h3>HMAF contingent participated in the Rim of the Pacific Exercise in Hawaii</h3></a>
+  <p>Members from the Tonga Royal Guards and the Royal Tonga Marines are currently going through training with our multinational partners in Hawaii.</p>
+</div>
+
+    <div class="col-sm-6">
+      <img src="../static/img/womenrugby.jpg" alt="Service 1" class="service-img">
+      <a href="#"><h3>Women rugby team won the first Women Defence Rugby Competition in New Zealand</h3></a>
+      <p>This was the first ever competition for Defence women featuring 15 teams from all over the world.</p>
+
+    </div>
+  </div>
+</div>
+
+  <!-- New additional section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="../static/img/fanapolo.jpg" alt="Service 1" class="service-img">
+        <a href="#"><h3>HMAF conducted marksmanship qualification exercise this week.</h3></a>
+        <p>Each year, HMAF will maintain its marksmanship skills.</p>
+      </div>
+    <div class="col-sm-6">
+      <img src="../static/img/bestwarrior.jpg" alt="Service 1" class="service-img">
+      <a href="#"><h3>Best Warrior Team completed the competition in Nevada with outstanding result</h3></a>
+      <p>The team consists of the best all round individual physically, mentally, and militarily</p>
+    </div>
+    </div>
+  </div>
+
+  <!-- Hero section -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Considering a career in the service?</h1>
+      <p>Join the Force and make a difference.</p>
+      <p><a class="btn btn-primary btn-lg" href="{{ url_for('join_us') }}" role="button">Join Us</a></p>
+    </div>
+  </div>
+<!-- Section 1 -->
+<section id="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/career1.jpg" alt="Section 1 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Becoming an enlisted soldier/sailor or a Commissioned Officer</h2>
+        <p>Enlisted Soldiers/Sailors are the backbone of the Force, responsible for carrying out orders and ensuring the success of each mission. Commissioned Officers are important leaders in the Force, tasked with making critical decisions and being responsible for the safety of Soldiers/Sailors. Depending on the path you take, there are a few things you must do to get started.</p>
+        <a href="#" class="btn btn-primary">More Info</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section id="section-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6">
+        <img src="../static/img/career2.jpg" alt="Section 2 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <h2>Meet the Requirements</h2>
+        <p>Are you ready to challenge yourself both physically and mentally? Do you want to serve your country and make a difference? Join the Force and become part of a team that values discipline, honor, and selfless service. We'll help you meet the requirements to enlist or become an Cadet Officer, including physical fitness and personal background checks. Take the first step towards a rewarding career in the Force and see what you're capable of achieving.</p>
+        <a href="#" class="btn btn-primary">See the Requirements</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section id="section-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service3.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Your Guide to Achieving Your Goals</h2>
+        <p>Joining the military is a big decision, but you don't have to make it alone. Our recruiters are dedicated to helping you achieve your goals and become part of country's most respected civil servants. With their expertise, you can confidently take the first step towards a rewarding career in the Force. Let us guide you towards a brighter future.</p>
+        <a href="{{ url_for('join_us') }}" class="btn btn-primary">Fill the Form</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer section -->
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 text-left">
+  <a class="footer-logo footer-logo-spacing" href="#">
+    <img src="../static/img/logo2.gif" alt="Logo"> His Majesty's Armed Forces
+  </a>
+  <p> Address: MHAF Headquarters, Vaha'akolo Road, Nuku'alofa</p>
+</div>
+
+    <div class="col-sm-4">
+      <h3>Upcoming Events</h3>
+      <ul class="footer-links">
+        <li><a href="event1.html">Event 1</a></li>
+        <li><a href="event2.html">Event 2</a></li>
+        <li><a href="event3.html">Event 3</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-left">How to Reach Us</h3>
+      <div class="row">
+        <div class="col-sm-6 social-icons">
+          <p>Phone: (676) 23-099</p>
+          <p>Email: info@hmaf.gov.to</p>
+          <p>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../static/img/facebook2.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="../static/img/twitter.jpg" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../static/img/Instagram.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+              <img src="../static/img/tiktok.jpg" alt="TikTok">
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright section -->
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p>&copy; <span id="current-year"></span> His Majesty's Armed Forces. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</div>
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js">
+
+</script>
+<!-- For the current year in the copyright section at the footer -->
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
+</body>
+
+</html>
+
+</html>

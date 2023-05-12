@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-P8i/ONoTdgRyT1QzFUpku+n/1Q2S57ZS15PZkNlXn4DlNt4yAtgH4lLUWWxmkdKQwjS+WyoPhHEGtbTXpW8XJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>His Majesty's Armed Forces</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujslaf5xM7XSr88+zkk+5DlFm4z4ujLg4yWp6YIK+0t+J" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9Md+9x" crossorigin="anonymous"></script>
+</head>
+
+<body class="index-page">
+
+
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-default custom-navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="../static/img/logo2.gif" alt="Logo"> Kau Tau 'A 'Ene 'Afio
+      </a>
+    </div>
+<div class="collapse navbar-collapse" id="navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <li><a href="#">Peesi Mu'a</a></li>
+<li class="dropdown custom-dropdown">
+  <a href="{{ url_for('about_us') }}" role="button" aria-haspopup="true" aria-expanded="false">Puipuitu'a <span class="caret"></span></a>
+  <ul class="dropdown-menu about-us">
+    <li><a href="#"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Fakalukufua</h4></a></li>
+    <li><a href="{{ url_for('mission') }}"><img src="../static/img/career1.jpg" alt="Image 2"><h4>Misiona</h4></a></li>
+    <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 3"><h4>Fa'unga</h4></a></li>
+    <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 4"><h4>Kau Taki</h4></a></li>
+  </ul>
+</li>
+
+<li class="dropdown custom-dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fili mei Heni <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="{{ url_for('careers') }}"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Ngaue'anga</h4></a></li>
+        <li><a href="{{ url_for('services') }}"><img src="../static/img/career1.jpg" alt="Image 1"><h4>Ngaahi Va'a</h4></a></li>
+        <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 1"><h4>Ongoongo</h4></a></li>
+        <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 1"><h4>Fetu'utaki</h4></a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right languages">
+    <li><a href="{{ url_for('index') }}">English</a></li>
+    <li><a href="{{ url_for('tongan') }}">Tongan</a></li>
+  </ul>
+  <form class="navbar-form navbar-right" role="search" action="/search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" name="q">
+    </div>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+  </form>
+</div>
+
+</nav>
+
+
+
+  <!-- Hero section -->
+<div class="page-wrapper">
+  <div class="jumbotron">
+    <video autoplay loop muted>
+      <source src="../static/vdo/rimpac.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <h1>Pole ki he Fatongia, liliu e mo'ui</h1>
+      <p>Koe teu tangata ma'ae kaha'u</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+  </div>
+<!-- Additional Section -->
+<div class="my-container text-center">
+  <h2>KAU TAU 'A 'ENE 'AFIO</h2>
+  <h4>TERRA MARIQUE</h4>
+  <img src="../static/img/logo2.gif" alt="Logo">
+  <p> Ko e Mision 'o e Kau Tau 'A 'Ene 'Afio ke maluʻi ʻ a e Puleʻangá mei he ngaahi fakamanamana mei tuʻá, maluʻi ki hotau tuʻunga - hau, kau ai hotau ngaahi konga tahi, pea poupouʻi ʻa e kau maʻu mafai fakapuleʻangá ʻi hono faʻu ha ʻātakai malu mo melino ke fakaleleiʻi ʻa e fakalakalaka fakasōsiale, fakaʻekonōmika, mo fakapolitikale ʻo e fonua.</p>
+</div>
+
+<!-- Additional Section -->
+<div class="container text-center">
+  <h2>Ngaahi Ongoongo</h2>
+</div>
+
+<!-- Additional sections -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+
+  <img src="../static/img/service1.jpg" alt="Service 1" class="service-img">
+  <a href="#"><h3>Kau atu ha kongakau ki he akotau 'i Hauai'i</h3></a>
+  <p>Na'e tukufolau atu 'a e kongakau fakatahataha mei he Ka'ate FakaTu'i kae pehe ki he Malini FakaTu'i ki he akotau lahi taha 'i mamani 'a ia 'oku kau kiai e ngaahi fonua lahi 'i Hauai'i</p>.</p>
+</div>
+
+    <div class="col-sm-6">
+      <img src="../static/img/service2.jpg" alt="Service 1" class="service-img">
+      <a href="#"><h3>Ikuna 'e he timi 'akapulu fefine e fuofua fe'auhi e ngaahi timi sotia fefine</h3></a>
+      <p>Koe hisitolia fo'ou eni hono ikuna'i he timi 'akapulu fefine e fe'auhi ko eni na'e fakahoko 'i Nu'u Sila.</p>
+
+    </div>
+  </div>
+</div>
+
+  <!-- New additional section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="../static/img/service3.jpg" alt="Service 1" class="service-img">
+        <a href="#"><h3>Fakahoko e fe'auhi fanapolo ki 'Eua.</h3></a>
+        <p>Ko e taha pe ia e ngaahi teuteu ki hono ngaue'aki e me'atau mo e tu'unga mateuteu e tangata sotia.</p>
+      </div>
+    <div class="col-sm-6">
+      <img src="../static/img/service4.jpg" alt="Service 1" class="service-img">
+      <a href="#"><h3>Kau atu 'a Tonga mo Fisi ki he fe'auhi "Best Warrior" 'oku fakahoko ki Reno 'i Amelika</h3></a>
+      <p>Koe tu'o ua 'aki eni e kau atu 'a Tonga ki he fe'auhi koeni 'a ia koe konga pe e va fekau'aki 'a e sotia Tonga pea mo e sotia 'Amelika.</p>
+    </div>
+    </div>
+  </div>
+
+  <!-- Hero section -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Oku ke fakakau nai keke pole ki he Fatongia?</h1>
+      <p>Pole ki he fatongia ke ma'u ha'o kaha'u lelei.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Fakaikiiki</a></p>
+    </div>
+  </div>
+<!-- Section 1 -->
+<section id="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/career1.jpg" alt="Section 1 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Hoko koha sotia pe ko ha Ofisa Fakanofo</h2>
+        <p>Koe sotia 'ikai fakanofo koe huitu'a ia 'o e Potungaue, ko honau fatongia ke malava e ngaahi ngaue pea a'usia e misiona. Koe kau 'Ofisa Fakanofo ko e kau taki ia 'o e Potungaue, 'oku fakafatongia'aki kinautolu ke nau faitu'utu'uni pea ke fakapapau'i 'a e malu 'a e kau sotia 'oku nau tokanga'i. Pe koeha pe ho'o ki he tafa'aki teke fou ai, 'oku 'i ai e ngaahi makatu'unga.</p>
+        <a href="#" class="btn btn-primary">Fakaikiiki</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section id="section-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6">
+        <img src="../static/img/career2.jpg" alt="Section 2 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <h2>Meet the Requirements</h2>
+        <p>Are you ready to challenge yourself both physically and mentally? Do you want to serve your country and make a difference? Join the Force and become part of a team that values discipline, honor, and selfless service. We'll help you meet the requirements to enlist or become an Cadet Officer, including physical fitness and personal background checks. Take the first step towards a rewarding career in the Force and see what you're capable of achieving.</p>
+        <a href="#" class="btn btn-primary">See the Requirements</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section id="section-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service3.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Your Guide to Achieving Your Goals</h2>
+        <p>Joining the military is a big decision, but you don't have to make it alone. Our recruiters are dedicated to helping you achieve your goals and become part of country's most respected civil servants. With their expertise, you can confidently take the first step towards a rewarding career in the Force. Let us guide you towards a brighter future.</p>
+        <a href="{{ url_for('mission') }}" class="btn btn-primary">Fill the Form</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<!-- Footer section -->
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 text-left">
+      <a class="footer-logo" href="#">
+        <img src="../static/img/logo2.gif" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+    <div class="col-sm-4">
+      <h3>Upcoming Events</h3>
+      <ul class="footer-links">
+        <li><a href="event1.html">Event 1</a></li>
+        <li><a href="event2.html">Event 2</a></li>
+        <li><a href="event3.html">Event 3</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-left">How to Reach Us</h3>
+      <div class="row">
+<div class="col-sm-6 social-icons">
+  <p>Phone: (676) 23-099</p>
+  <p>Email: info@hmaf.gov.to</p>
+  <p>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="../static/img/facebook2.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="../static/img/twitter.jpg" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="../static/img/Instagram.jpg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com" target="_blank">
+      <img src="../static/img/tiktok.jpg" alt="TikTok">
+    </a>
+  </p>
+</div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+
+</body>
+
+</html>

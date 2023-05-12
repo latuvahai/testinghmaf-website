@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>His Majesty's Armed Forces</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/X+Lb+2PRKzU8dUs/8/50t32I6f/LurBLK0f8Dc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<header>
+  <nav class="custom-navbar navbar-expand-lg navbar-light bg-light">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="{{ url_for('index') }}"><img src="../static/img/logo2.gif" alt="Logo"></a>
+      </div>
+      <div class="menu-items navbar-nav">
+        <ul>
+          <li class="nav-item">
+            <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-hamburger" href="#" role="button" id="hamburgerButton" aria-expanded="false">
+              <i class="bi bi-list"></i>
+              <i class="bi bi-x" style="display: none;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="d-flex align-items-center ms-auto">
+          <form class="navbar-form search-form me-3" role="search" action="/search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="q">
+              <button type="submit" class="btn btn-outline-light">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <div class="language-options">
+            <a href="#" class="me-2">English</a>
+            <a href="#">Tongan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- Slideout Menu -->
+<div class="slideout-menu">
+  <ul class="slideout-menu-list">
+    <li class="nav-item">
+      <a href="#" class="nav-link">ABOUT US</a>
+        <div class="sub-menu-container" id="about-us-submenu">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service1.jpg" alt="Mission">
+                            <a href="#" class="nav-link">Mission</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service2.jpg" alt="History">
+                            <a href="#" class="nav-link">History</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service3.jpg" alt="Organization">
+                            <a href="#" class="nav-link">Organization</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service4.jpg" alt="Leadership">
+                            <a href="#" class="nav-link">Leadership</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">CAREERS</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career1.jpg" alt="Commissioned Officers">
+                            <a href="#" class="nav-link">Commissioned Officers</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career2.jpg" alt="Enlisted">
+                            <a href="#" class="nav-link">Enlisted</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career3.jpg" alt="Specialists">
+                            <a href="#" class="nav-link">Specialists</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career4.jpg" alt="Civilians">
+                            <a href="#" class="nav-link">Civilians</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">SERVICES</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo1.png" alt="Tonga Royal Guards">
+                            <a href="#" class="nav-link">Tonga Royal Guards</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo2.png" alt="Land Force">
+                            <a href="#" class="nav-link">Land Force</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo3.png" alt="Tonga Royal Navy">
+                            <a href="#" class="nav-link">Tonga Royal Navy</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo4.png" alt="Air Wing">
+                            <a href="#" class="nav-link">Air Wing</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  <li class="nav-item">
+      <a href="#" class="nav-link">HOW TO JOIN</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent.jpg" alt="Requirement">
+                            <a href="#" class="nav-link">Requirement</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent2.jpg" alt="How To Prepare">
+                            <a href="#" class="nav-link">How to Prepare</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi.jpg" alt="How to Contact Us">
+                            <a href="#" class="nav-link">How To Contact Us</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi2.png" alt="Fill the Form">
+                            <a href="#" class="nav-link">Fill the Form</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  </ul>
+</div>
+<!--Main -->
+<div class="header-section">
+  <div class="header-text">
+    <h1>CAREERS & JOBS</h1>
+    <p>Start your career with us!</p>
+  </div>
+</div>
+
+<!-- Choose Your Journey Section -->
+<section class="journey-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>CHOOSE YOUR AMBITIONS</h2>
+        <p>Discover a world of exciting careers! Dive into the options below to uncover the perfect job that aligns with your ambitions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- High Priority Roles Section -->
+<section class="high-priority-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>High Priority Roles</h2>
+        <p>Discover your next career with our priority job listings!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-center priority-column">
+        <div class="priority-role">
+          <img src="../static/img/career1.jpg" alt="Role 1">
+          <div class="priority-text">Role 1</div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center priority-column">
+        <div class="priority-role">
+          <img src="../static/img/career2.jpg" alt="Role 2">
+          <div class="priority-text">Role 2</div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center priority-column">
+        <div class="priority-role">
+          <img src="../static/img/career3.jpg" alt="Role 3">
+          <div class="priority-text">Role 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="choose-career-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center career-heading">
+        <h2>Choose your Career</h2>
+        <p>Find out what career is in store for you</p>
+      </div>
+    </div>
+
+    <!-- Army Jobs -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="career-info-container">
+          <img src="../static/img/career1.jpg" alt="Army" class="career-info-image">
+          <div class="career-info-content">
+            <h3>Army Jobs</h3>
+            <p>What jobs the Army can offer you.</p>
+            <div class="toggle-button" onclick="toggleJobListArmy()">
+              <span class="toggle-sign">+</span>
+            </div>
+          </div>
+          <div class="job-list-wrapper" id="job-list-wrapper-army">
+            <hr>
+            <div class="job-list">
+              <ul>
+                  <li><a href="job1.html">Job 1</a></li>
+                  <li><a href="job2.html">Job 2</a></li>
+                  <li><a href="job3.html">Job 3</a></li>
+                  <li><a href="job4.html">Job 4</a></li>
+             </ul>
+             <ul>
+                  <li><a href="job5.html">Job 5</a></li>
+                  <li><a href="job6.html">Job 6</a></li>
+                  <li><a href="job7.html">Job 7</a></li>
+                  <li><a href="job8.html">Job 8</a></li>
+             </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navy Jobs -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="career-info-container">
+          <img src="../static/img/career2.jpg" alt="Navy" class="career-info-image">
+          <div class="career-info-content">
+            <h3>Navy Jobs</h3>
+            <p>Chart your course, set sail with the Navy, and discover many opportunities.</p>
+            <div class="toggle-button" onclick="toggleJobListNavy()">
+              <span class="toggle-sign">+</span>
+            </div>
+          </div>
+          <div class="job-list-wrapper" id="job-list-wrapper-navy">
+            <hr>
+            <div class="job-list">
+              <ul>
+                  <li><a href="job1.html">Job 1</a></li>
+                  <li><a href="job2.html">Job 2</a></li>
+                  <li><a href="job3.html">Job 3</a></li>
+                  <li><a href="job4.html">Job 4</a></li>
+             </ul>
+             <ul>
+                  <li><a href="job5.html">Job 5</a></li>
+                  <li><a href="job6.html">Job 6</a></li>
+                  <li><a href="job7.html">Job 7</a></li>
+                  <li><a href="job8.html">Job 8</a></li>
+             </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Support Jobs -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="career-info-container">
+          <img src="../static/img/service1.jpg" alt="Support" class="career-info-image">
+          <div class="career-info-content">
+            <h3>Support Jobs</h3>
+            <p>Logistics is the backbone of the military: Join the Support Units and keep the mission moving forward.</p>
+            <div class="toggle-button" onclick="toggleJobListSupport()">
+              <span class="toggle-sign">+</span>
+            </div>
+          </div>
+          <div class="job-list-wrapper" id="job-list-wrapper-support">
+            <hr>
+            <div class="job-list">
+              <ul>
+                  <li><a href="job1.html">Armourer</a></li>
+                  <li><a href="job2.html">Storeman</a></li>
+                  <li><a href="job3.html">Carpenter</a></li>
+                  <li><a href="job4.html">Plumber</a></li>
+             </ul>
+             <ul>
+                  <li><a href="job5.html">Electrician</a></li>
+                  <li><a href="job6.html">Mechanical Engineer</a></li>
+                  <li><a href="job7.html">Caterer</a></li>
+                  <li><a href="job8.html">Musician</a></li>
+             </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Footer-->
+
+<footer class="bg-dark text-white py-3 mt-5">
+  <div class="container">
+    <div class="row footer-row">
+      <div class="col-md-4 text-right">
+        <img src="../static/img/logo2.gif" alt="Logo" class="footer-logo">
+        <p class="footer-address">
+          His Majesty's Armed Forces<br>
+          Vilai Barracks<br>
+          Vaha'akolo Road<br>
+          Nuku'alofa, Tonga
+        </p>
+      </div>
+      <div class="col-md-4 text-center.">
+        <h3 class="footer-title">Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">How to Join</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-right">
+        <h3 class="footer-title">Connect with Us</h3>
+        <p>Phone Number: (676) 23-099</p>
+        <p>Email: info@hmaf.gov.to</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row footer-bottom-row mt-3">
+  <div class="col-md-12 text-center">
+    <p>&copy; <span id="current-year"></span> His Majesty's Armed Forces. All rights reserved.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Terms of Use</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</footer>
+
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+<!-- For the current year in the copyright section at the footer -->
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Add these lines right before the closing </body> tag -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+  function updateSubmenuDisplay() {
+    if ($(window).width() <= 991.98) {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "flex");
+    } else {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "none");
+    }
+  }
+
+  $("#hamburgerButton").on("click", function () {
+    var slideoutMenu = $(".slideout-menu");
+    var listIcon = $(this).find(".bi-list");
+    var xIcon = $(this).find(".bi-x");
+
+    listIcon.toggle();
+    xIcon.toggle();
+    slideoutMenu.toggleClass("active");
+
+    if (slideoutMenu.hasClass("active")) {
+      slideoutMenu.css("display", "block");
+    } else {
+      setTimeout(function() {
+        slideoutMenu.css("display", "none");
+      }, 300);
+    }
+  });
+
+  $(".nav-item").hover(
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "flex");
+      }
+    },
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "none");
+      }
+    }
+  );
+});
+
+$(document).ready(function() {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+$(window).on("resize load", function() {
+  updateSubmenuDisplay();
+});
+
+</script>
+<script>
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent form submission and page reload
+
+  // Add your form validation logic here (if necessary)
+
+  // Create FormData object to collect form data
+  var formData = new FormData(event.target);
+
+  // Send form data to the server using AJAX
+  fetch('/join_us', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Show the message container and set the message text
+        document.getElementById('message-container').style.display = 'block';
+        document.getElementById('message-text').innerText = data.message;
+
+        // Reset the form
+        document.getElementById('contact-form').reset();
+      } else {
+        // Handle error case
+      }
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+      // Handle error case
+    });
+}
+
+</script>
+<script>
+    function closeMessage() {
+    var messageContainer = document.getElementById("message-container");
+    messageContainer.style.display = "none";
+}
+
+</script>
+
+<script>
+function toggleJobListArmy() {
+  var jobListWrapper = document.getElementById('job-list-wrapper-army');
+  var toggleSign = jobListWrapper.querySelector('.toggle-sign');
+  var jobList = jobListWrapper.querySelector('.job-list');
+
+  if (jobList.style.display === 'none') {
+    jobList.style.display = 'block';
+    toggleSign.textContent = '-';
+  } else {
+    jobList.style.display = 'none';
+    toggleSign.textContent = '+';
+  }
+}
+
+function toggleJobListNavy() {
+  var jobListWrapper = document.getElementById('job-list-wrapper-navy');
+  var toggleSign = jobListWrapper.querySelector('.toggle-sign');
+  var jobList = jobListWrapper.querySelector('.job-list');
+
+  if (jobList.style.display === 'none') {
+    jobList.style.display = 'block';
+    toggleSign.textContent = '-';
+  } else {
+    jobList.style.display = 'none';
+    toggleSign.textContent = '+';
+  }
+}
+function toggleJobListSupport() {
+  var jobListWrapper = document.getElementById('job-list-wrapper-support');
+  var toggleSign = jobListWrapper.querySelector('.toggle-sign');
+  var jobList = jobListWrapper.querySelector('.job-list');
+
+  if (jobList.style.display === 'none') {
+    jobList.style.display = 'block';
+    toggleSign.textContent = '-';
+  } else {
+    jobList.style.display = 'none';
+    toggleSign.textContent = '+';
+  }
+}
+</script>
+
+</body>
+</html>

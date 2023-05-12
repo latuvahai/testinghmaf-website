@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-P8i/ONoTdgRyT1QzFUpku+n/1Q2S57ZS15PZkNlXn4DlNt4yAtgH4lLUWWxmkdKQwjS+WyoPhHEGtbTXpW8XJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="../static/css/about_us.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>His Majesty's Armed Forces</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujslaf5xM7XSr88+zkk+5DlFm4z4ujLg4yWp6YIK+0t+J" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9Md+9x" crossorigin="anonymous"></script>
+</head>
+
+<body class="index-page">
+
+
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-default custom-navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="../static/img/logo2.gif" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+<div class="collapse navbar-collapse" id="navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <li><a href="#">Home</a></li>
+<li class="dropdown custom-dropdown">
+  <a href="{{ url_for('about_us') }}" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+  <ul class="dropdown-menu about-us">
+    <li><a href="#"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Overview</h4></a></li>
+    <li><a href="{{ url_for('mission') }}"><img src="../static/img/career1.jpg" alt="Image 2"><h4>Mission</h4></a></li>
+    <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 3"><h4>Organization</h4></a></li>
+    <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 4"><h4>Leadership</h4></a></li>
+  </ul>
+</li>
+
+<li class="dropdown custom-dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="{{ url_for('careers') }}"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Careers & Jobs</h4></a></li>
+        <li><a href="{{ url_for('services') }}"><img src="../static/img/career1.jpg" alt="Image 1"><h4>Services</h4></a></li>
+        <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 1"><h4>News & Events</h4></a></li>
+        <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 1"><h4>Contact</h4></a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right languages">
+    <li><a href="{{ url_for('index') }}">English</a></li>
+    <li><a href="{{ url_for('tongan') }}">Tongan</a></li>
+  </ul>
+  <form class="navbar-form navbar-right" role="search" action="/search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" name="q">
+    </div>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+  </form>
+</div>
+
+</nav>
+
+ <!-- Hero section -->
+<div class="page-wrapper">
+<section id="hero" class="mission-hero">
+  <div class="container">
+    <h1>OUR MISSION and VALUES</h1>
+    <h3>HMAF is founded upon a shared vision, mission, functions and values.</h3>
+  </div>
+</section>
+
+<!-- Section 1 -->
+<section id="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/career1.jpg" alt="Section 1 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Vision</h2>
+        <p>HMAF is a well-prepared and professional organization to carry out its functions and duties effectively and efficiently to the sovereign, government, and the people of Tonga as stated in HMAF Act 1992.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section id="section-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6">
+        <img src="../static/img/career2.jpg" alt="Section 2 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <h2>Mission</h2>
+        <p>To defend the Kingdom against external threats, provide protection for our sovereignty, including our territorial waters, and support civil authorities in creating a secure and peaceful environment to enhance the social, economic, and political development of the Kingdom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section id="section-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service3.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Functions</h2>
+        <p> Defence of the Kingdom</p>
+        <p>Aid to the civil authorities in the maintenance of order in the Kingdom</p>
+        <p>Support of civil authorities</p>
+        <p>Other functions and duties His Majesty may determine from time to time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 -->
+<section id="section-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6">
+        <img src="../static/img/career4.jpg" alt="Section 4 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <h2>Values</h2>
+              <div class="row">
+        <div class="col-sm-6">
+          <p>Courage</p>
+          <p>Commitment</p>
+          <p>Comradeship</p>
+          <p>Integrity</p>
+          <p>Respect</p>
+        </div>
+        <div class="col-sm-6">
+          <p>Professionalism</p>
+          <p>Humility</p>
+          <p>Duty</p>
+          <p>Loyalty</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5 -->
+<section id="section-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service3.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Other Mandates</h2>
+        <p>There are other functions that are authorized by various Acts for HMAF to act upon.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+ </div>
+<!-- Footer section -->
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 text-left">
+      <a class="footer-logo" href="#">
+        <img src="../static/img/logo2.gif" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+    <div class="col-sm-4">
+      <h3>Upcoming Events</h3>
+      <ul class="footer-links">
+        <li><a href="event1.html">Event 1</a></li>
+        <li><a href="event2.html">Event 2</a></li>
+        <li><a href="event3.html">Event 3</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-left">How to Reach Us</h3>
+      <div class="row">
+<div class="col-sm-6 social-icons">
+  <p>Phone: (676) 23-099</p>
+  <p>Email: info@hmaf.gov.to</p>
+  <p>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="../static/img/facebook2.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="../static/img/twitter.jpg" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="../static/img/Instagram.jpg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com" target="_blank">
+      <img src="../static/img/tiktok.jpg" alt="TikTok">
+    </a>
+  </p>
+</div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+
+</body>
+
+</html>

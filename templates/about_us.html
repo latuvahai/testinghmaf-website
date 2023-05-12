@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-P8i/ONoTdgRyT1QzFUpku+n/1Q2S57ZS15PZkNlXn4DlNt4yAtgH4lLUWWxmkdKQwjS+WyoPhHEGtbTXpW8XJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="../static/css/about_us.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>His Majesty's Armed Forces</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujslaf5xM7XSr88+zkk+5DlFm4z4ujLg4yWp6YIK+0t+J" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9Md+9x" crossorigin="anonymous"></script>
+</head>
+
+<body class="index-page">
+
+
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-default custom-navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="../static/img/logo2.gif" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+<div class="collapse navbar-collapse" id="navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <li><a href="#">Home</a></li>
+<li class="dropdown custom-dropdown">
+  <a href="{{ url_for('about_us') }}" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+  <ul class="dropdown-menu about-us">
+    <li><a href="#"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Overview</h4></a></li>
+    <li><a href="{{ url_for('mission') }}"><img src="../static/img/career1.jpg" alt="Image 2"><h4>Mission</h4></a></li>
+    <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 3"><h4>Organization</h4></a></li>
+    <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 4"><h4>Leadership</h4></a></li>
+  </ul>
+</li>
+
+<li class="dropdown custom-dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="{{ url_for('careers') }}"><img src="../static/img/career0.jpg" alt="Image 1"><h4>Careers & Jobs</h4></a></li>
+        <li><a href="{{ url_for('services') }}"><img src="../static/img/career1.jpg" alt="Image 1"><h4>Services</h4></a></li>
+        <li><a href="#"><img src="../static/img/career2.jpg" alt="Image 1"><h4>News & Events</h4></a></li>
+        <li><a href="#"><img src="../static/img/career3.jpg" alt="Image 1"><h4>Contact</h4></a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right languages">
+    <li><a href="{{ url_for('index') }}">English</a></li>
+    <li><a href="{{ url_for('tongan') }}">Tongan</a></li>
+  </ul>
+  <form class="navbar-form navbar-right" role="search" action="/search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" name="q">
+    </div>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+  </form>
+</div>
+
+</nav>
+
+ <!-- Hero section -->
+<div class="page-wrapper">
+<section id="hero" class="about_us-hero">
+  <div class="container">
+    <h1>Know More About What This Organization is About</h1>
+  </div>
+</section>
+
+<!-- Section 1 -->
+<section id="section-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/career1.jpg" alt="Section 1 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Overview</h2>
+        <p>Briefly introduce HMAF and provide a summary of its purpose and mission</p>
+        <a href="#" class="btn btn-primary">More Info</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section id="section-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6">
+        <img src="../static/img/career2.jpg" alt="Section 2 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <h2>History</h2>
+        <p>Provide a brief history of the organization, including its establishment and key milestones</p>
+        <a href="#" class="btn btn-primary">More on History</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section id="section-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service3.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Mission and Values</h2>
+        <p>Clearly state the mission and values of HMAF, including its commitments to serving the people and promoting peace, stability, and propriety in the region.</p>
+        <a href="{{ url_for('mission') }}" class="btn btn-primary">More on This</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 -->
+<section id="section-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6">
+        <img src="../static/img/career4.jpg" alt="Section 4 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <h2>Leadership</h2>
+        <p>Introduce the leadership of the organization,including the senior officers and key personnel responsible for overseeing its operations</p>
+        <a href="#" class="btn btn-primary">Our Leaders</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5 -->
+<section id="section-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service3.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Organization</h2>
+        <p>Provide an overview of the organizational structure of HMAF, including the different branches and departments that make up the organization.</p>
+        <a href="#" class="btn btn-primary">Organizational Structure</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section 6 -->
+  <section id="section-6">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-push-6">
+      <img src="../static/img/career4.jpg" alt="Section 4 Image" class="img-responsive">
+    </div>
+    <div class="col-md-6 col-md-pull-6">
+      <h2>Training and Development</h2>
+      <p>Describe the training and development programs offered by HMAF, including details on how the organization prepares its personnel for their roles and responsibilities.</p>
+      <a href="#" class="btn btn-primary">More Info</a>
+    </div>
+  </div>
+</div>
+</section>
+  <!-- Section 7 -->
+<section id="section-7">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service3.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Partnership and Alliances</h2>
+        <p>Highlight the HMAF's partnerships and alliances with other organizations and countries, and how these relationships contribute to the success of the organization.</p>
+        <a href="#" class="btn btn-primary">Meet our Partners</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Section 8 -->
+  <section id="section-8">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-push-6">
+      <img src="../static/img/career4.jpg" alt="Section 4 Image" class="img-responsive">
+    </div>
+    <div class="col-md-6 col-md-pull-6">
+      <h2>Achievements</h2>
+      <p>Provide information on HMAF's accomplishments and successes in recent years, including any awards or recognition it has recieved.</p>
+      <a href="#" class="btn btn-primary">More on Achievements</a>
+    </div>
+  </div>
+</div>
+</section>
+  <!-- Section 9 -->
+<section id="section-9">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/img/service1.jpg" alt="Section 3 Image" class="img-responsive">
+      </div>
+      <div class="col-md-6">
+        <h2>Future Plans</h2>
+        <p>Describe the HMAF's plans for the future, including any upcoming initiatives or projects that the organization is working on.</p>
+        <a href="#" class="btn btn-primary">Future</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Section 10 -->
+<section id="section-10">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-push-6">
+      <img src="../static/img/career4.jpg" alt="Section 4 Image" class="img-responsive">
+    </div>
+    <div class="col-md-6 col-md-pull-6">
+      <h2>Contact Information</h2>
+      <p>Provide contact information for the HMAF, including its address, phone number, email address, and social media accounts.</p>
+      <a href="#" class="btn btn-primary">How to Reach Us</a>
+    </div>
+  </div>
+</div>
+</section>
+  </div>
+ <!-- Footer section -->
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 text-left">
+      <a class="footer-logo" href="#">
+        <img src="../static/img/logo2.gif" alt="Logo"> His Majesty's Armed Forces
+      </a>
+    </div>
+    <div class="col-sm-4">
+      <h3>Upcoming Events</h3>
+      <ul class="footer-links">
+        <li><a href="event1.html">Event 1</a></li>
+        <li><a href="event2.html">Event 2</a></li>
+        <li><a href="event3.html">Event 3</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-left">How to Reach Us</h3>
+      <div class="row">
+<div class="col-sm-6 social-icons">
+  <p>Phone: (676) 23-099</p>
+  <p>Email: info@hmaf.gov.to</p>
+  <p>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="../static/img/facebook2.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="../static/img/twitter.jpg" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="../static/img/Instagram.jpg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com" target="_blank">
+      <img src="../static/img/tiktok.jpg" alt="TikTok">
+    </a>
+  </p>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+
+</body>
+
+</html>
