@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>His Majesty's Armed Forces</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/X+Lb+2PRKzU8dUs/8/50t32I6f/LurBLK0f8Dc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<header>
+  <nav class="custom-navbar navbar-expand-lg navbar-light bg-light">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="{{ url_for('index') }}"><img src="../static/img/logo2.gif" alt="Logo"></a>
+      </div>
+      <div class="menu-items navbar-nav">
+        <ul>
+          <li class="nav-item">
+            <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-hamburger" href="#" role="button" id="hamburgerButton" aria-expanded="false">
+              <i class="bi bi-list"></i>
+              <i class="bi bi-x" style="display: none;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="d-flex align-items-center ms-auto">
+          <form class="navbar-form search-form me-3" role="search" action="/search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="q">
+              <button type="submit" class="btn btn-outline-light">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <div class="language-options">
+            <a href="#" class="me-2">English</a>
+            <a href="#">Tongan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- Slideout Menu -->
+<div class="slideout-menu">
+  <ul class="slideout-menu-list">
+    <li class="nav-item">
+      <a href="#" class="nav-link">ABOUT US</a>
+        <div class="sub-menu-container" id="about-us-submenu">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service1.jpg" alt="Mission">
+                            <a href="#" class="nav-link">Mission</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service2.jpg" alt="History">
+                            <a href="#" class="nav-link">History</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service3.jpg" alt="Organization">
+                            <a href="#" class="nav-link">Organization</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service4.jpg" alt="Leadership">
+                            <a href="#" class="nav-link">Leadership</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">CAREERS</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career1.jpg" alt="Commissioned Officers">
+                            <a href="#" class="nav-link">Commissioned Officers</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career2.jpg" alt="Enlisted">
+                            <a href="#" class="nav-link">Enlisted</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career3.jpg" alt="Specialists">
+                            <a href="#" class="nav-link">Specialists</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career4.jpg" alt="Civilians">
+                            <a href="#" class="nav-link">Civilians</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">SERVICES</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo1.png" alt="Tonga Royal Guards">
+                            <a href="#" class="nav-link">Tonga Royal Guards</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo2.png" alt="Land Force">
+                            <a href="#" class="nav-link">Land Force</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo3.png" alt="Tonga Royal Navy">
+                            <a href="#" class="nav-link">Tonga Royal Navy</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo4.png" alt="Air Wing">
+                            <a href="#" class="nav-link">Air Wing</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  <li class="nav-item">
+      <a href="#" class="nav-link">HOW TO JOIN</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent.jpg" alt="Requirement">
+                            <a href="#" class="nav-link">Requirement</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent2.jpg" alt="How To Prepare">
+                            <a href="#" class="nav-link">How to Prepare</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi.jpg" alt="How to Contact Us">
+                            <a href="#" class="nav-link">How To Contact Us</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi2.png" alt="Fill the Form">
+                            <a href="#" class="nav-link">Fill the Form</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  </ul>
+</div>
+<!--Form -->
+<div class="header-section">
+  <div class="header-text">
+    <h1>JOIN US</h1>
+    <p>Fill out the form below and one of our recruiters will get in touch with you shortly.</p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="form-row form-instructions">
+      <div class="col-md-10 offset-md-1">
+        <h2>How to fill out the form.</h2>
+        <p>If you're interested in joining His Majesty's Armed Forces, you can fill out the form below and we can guide you on how to prepare to join.</p>
+        <ul>
+          <li>Enter your full name</li>
+          <li>Enter your email or phone number so that we can easily get in touch with you</li>
+          <li>Specify if you wanted to be an Officer, Enlisted soldier, or a specialist. See the section of the website that define those.</li>
+          <li>Enter anything else that you want us to know about you or anything that you want to know from us before we can keep in touch</li>
+        </ul>
+        <p>Our recruiters are here to help guide you through the process and answer any questions you may have. We look forward to hearing from you!</p>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-md-8 offset-md-2">
+        <form id="contact-form" method="POST" action="{{ url_for('join_us') }}" onsubmit="return handleSubmit(event);">
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control custom-input" id="fullName" name="fullName" placeholder="Enter your full name/Tohi ho hingoa kakato" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control custom-input" id="email" name="email" placeholder="Enter your email address/Tohi ho email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control custom-input" id="phone" name="phone" placeholder="Enter your phone number/Tohi ho fika telefoni" required>
+          </div>
+          <div class="mb-3">
+            <label for="preferredContact" class="form-label">Preferred Contact Method/ Ha founga te mau fetu'utaki atu ai</label>
+            <select class="form-control custom-input" id="preferredContact" name="preferredContact" required>
+                <option>Phone</option>
+                <option>Email</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="position" class="form-label">Position of Interest/ Tu'unga 'oku ke fie hu mai ki ai</label>
+            <select class="form-control custom-input" id="position" name="position" required>
+              <option>Commissioned Officer/ 'Ofisa</option>
+              <option>Enlisted Soldier/ Sotia</option>
+              <option>Specialist/ Taukei Makehe</option>
+              <!-- Add other positions here -->
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Brief Message or Inquiry</label>
+            <textarea class="form-control custom-inquiry" id="message" name="message" rows="3" placeholder="Enter your message or inquiry" required></textarea>
+          </div>
+          <div class="submit-container d-flex align-items-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <!-- Add this right after the submit button -->
+            <div id="message-container" style="display: none; position: relative; left: 20px; background-color: #f1f1f1; padding: 10px; border-radius: 5px; z-index: 9999;">
+              <span id="message-text" style="color: #000;"></span> <!-- Set the text color to black -->
+              <button type="button" onclick="closeMessage()">Close</button>
+            </div>
+              {% if message %}
+    <div class="alert alert-success" role="alert">
+        {{ message }}
+    </div>
+{% endif %}
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="form-row form-instructions">
+      <div class="col-md-10 offset-md-1">
+        <h2>Approaching your Recruiters</h2>
+        <p>If you're interested in joining His Majesty's Armed Forces, there are a few things you should know when approaching our recruiters:</p>
+        <ul>
+          <li>Be prepared to talk about the reasons why you want to join</li>
+          <li>Be prepared to talk about your background, education, and experience</li>
+          <li>Be honest about any past legal or medical issues that may affect your eligibility to join</li>
+          <li>Be willing to undergo physical and mental evaluations as part of the recruitment process</li>
+          <li>Ask about the kind of jobs that we offer</li>
+          <li>Ask about the recruitment process and the requirements to join</li>
+          <li>Ask questions and seek clarification on anything you're unsure of</li>
+        </ul>
+        <p>Our recruiters are here to help guide you through the process and answer any questions you may have. We look forward to hearing from you!</p>
+      </div>
+    </div>
+  </div>
+
+<!--Footer-->
+
+<footer class="bg-dark text-white py-3 mt-5">
+  <div class="container">
+    <div class="row footer-row">
+      <div class="col-md-4 text-right">
+        <img src="../static/img/logo2.gif" alt="Logo" class="footer-logo">
+        <p class="footer-address">
+          His Majesty's Armed Forces<br>
+          Vilai Barracks<br>
+          Vaha'akolo Road<br>
+          Nuku'alofa, Tonga
+        </p>
+      </div>
+      <div class="col-md-4 text-center.">
+        <h3 class="footer-title">Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">How to Join</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-right">
+        <h3 class="footer-title">Connect with Us</h3>
+        <p>Phone Number: (676) 23-099</p>
+        <p>Email: info@hmaf.gov.to</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row footer-bottom-row mt-3">
+  <div class="col-md-12 text-center">
+    <p>&copy; <span id="current-year"></span> His Majesty's Armed Forces. All rights reserved.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Terms of Use</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</footer>
+
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+<!-- For the current year in the copyright section at the footer -->
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Add these lines right before the closing </body> tag -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+  function updateSubmenuDisplay() {
+    if ($(window).width() <= 991.98) {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "flex");
+    } else {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "none");
+    }
+  }
+
+  $("#hamburgerButton").on("click", function () {
+    var slideoutMenu = $(".slideout-menu");
+    var listIcon = $(this).find(".bi-list");
+    var xIcon = $(this).find(".bi-x");
+
+    listIcon.toggle();
+    xIcon.toggle();
+    slideoutMenu.toggleClass("active");
+
+    if (slideoutMenu.hasClass("active")) {
+      slideoutMenu.css("display", "block");
+    } else {
+      setTimeout(function() {
+        slideoutMenu.css("display", "none");
+      }, 300);
+    }
+  });
+
+  $(".nav-item").hover(
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "flex");
+      }
+    },
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "none");
+      }
+    }
+  );
+});
+
+$(document).ready(function() {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+$(window).on("resize load", function() {
+  updateSubmenuDisplay();
+});
+
+</script>
+<script>
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent form submission and page reload
+
+  // Add your form validation logic here (if necessary)
+
+  // Create FormData object to collect form data
+  var formData = new FormData(event.target);
+
+  // Send form data to the server using AJAX
+  fetch('/join_us', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Show the message container and set the message text
+        document.getElementById('message-container').style.display = 'block';
+        document.getElementById('message-text').innerText = data.message;
+
+        // Reset the form
+        document.getElementById('contact-form').reset();
+      } else {
+        // Handle error case
+      }
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+      // Handle error case
+    });
+}
+
+</script>
+<script>
+    function closeMessage() {
+    var messageContainer = document.getElementById("message-container");
+    messageContainer.style.display = "none";
+}
+
+</script>
+</body>
+</html>

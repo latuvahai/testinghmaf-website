@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kau Tau 'A 'Ene 'Afio</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/X+Lb+2PRKzU8dUs/8/50t32I6f/LurBLK0f8Dc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+<header>
+  <nav class="custom-navbar navbar-expand-lg navbar-light bg-light">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#"><img src="../static/img/logo2.gif" alt="Logo"></a>
+      </div>
+      <div class="menu-items navbar-nav">
+        <ul>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-hamburger" href="#" role="button" id="hamburgerButton" aria-expanded="false">
+              <i class="bi bi-list"></i>
+              <i class="bi bi-x" style="display: none;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="d-flex align-items-center ms-auto">
+          <form class="navbar-form search-form me-3" role="search" action="/search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="q">
+              <button type="submit" class="btn btn-outline-light">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <div class="language-options">
+            <a href="{{ url_for('index') }}" class="me-2">English</a>
+            <a href="#">Tongan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- Slideout Menu -->
+<div class="slideout-menu">
+  <ul class="slideout-menu-list">
+    <li class="nav-item">
+      <a href="#" class="nav-link">POTUNGAUE</a>
+        <div class="sub-menu-container" id="about-us-submenu">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service1.jpg" alt="Mission">
+                            <a href="#" class="nav-link">Misiona</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service2.jpg" alt="History">
+                            <a href="#" class="nav-link">Hisitolia</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service3.jpg" alt="Organization">
+                            <a href="#" class="nav-link">Fa'unga</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/service4.jpg" alt="Leadership">
+                            <a href="#" class="nav-link">Kau Taki</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">NGAAHI LAKANGA</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career1.jpg" alt="Commissioned Officers">
+                            <a href="#" class="nav-link">'Ofisa Fakanofo</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career2.jpg" alt="Enlisted">
+                            <a href="#" class="nav-link">Sotia</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career3.jpg" alt="Specialists">
+                            <a href="#" class="nav-link">Taukei Makehe</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/career4.jpg" alt="Civilians">
+                            <a href="#" class="nav-link">Siviliane</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">NGAAHI VA'A</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo1.png" alt="Tonga Royal Guards">
+                            <a href="#" class="nav-link">Ka'ate Faka-Tu'i</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo2.png" alt="Land Force">
+                            <a href="#" class="nav-link">Va'a Tau 'Uta</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo3.png" alt="Tonga Royal Navy">
+                            <a href="#" class="nav-link">Tautahi Faka-Tu'i</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/camo4.png" alt="Air Wing">
+                            <a href="#" class="nav-link">Va'a Laula Puna</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  <li class="nav-item">
+      <a href="#" class="nav-link">FOUNGA HU MAI</a>
+        <div class="sub-menu-container">
+            <div class="sub-dropdown-menu slideout-sub-dropdown-menu">
+                <div class="sub-dropdown-menu">
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent.jpg" alt="Requirement">
+                            <a href="#" class="nav-link">Ngaahi Makatu'unga</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/transparent2.jpg" alt="How To Prepare">
+                            <a href="#" class="nav-link">Founga keke mateuteu ai</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi.jpg" alt="How to Contact Us">
+                            <a href="#" class="nav-link">Founga fetu'utaki</a>
+                        </div>
+                        <div class="sub-dropdown-column">
+                            <img src="../static/img/kupesi2.png" alt="Fill the Form">
+                            <a href="{{ url_for('join_us') }}">Fakafonu e foomu</a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </li>
+  </ul>
+</div>
+<section class="video-container">
+    <video controls autoplay loop muted>
+        <source src="../static/vdo/tafakula.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-text">
+        <h1>Hoko koha fa'ifa'itaki'anga, Kau mai</h1>
+    </div>
+</section>
+
+<div class="my-container text-center">
+  <h2 class="title-large">KAU TAU 'A 'ENE 'AFIO</h2>
+  <h4>TERRA MARIQUE</h4>
+  <img src="../static/img/logo2.gif" alt="Logo">
+  <p>'Oku talitali lelei koe ki he peesi 'a e Kau Tau 'A 'Ene 'Afio. Ko e Misiona ke malu'i e fonua mei ha ngaahi fakamanamana mei tu'a, malu'i e Hau mo e Fonua, kau ki ai mo hotau potu tahi, pea poupou ki he kau ma'u mafai he Pule'anga ke fakatupulaki 'a e melino mo tu'unga fakasosiale mo faka'ekonomika 'o Tonga.</p>
+</div>
+
+<div class="highlights-section">
+  <h2 class="title-highlight">NGAAHI IKUNA</h2>
+  <div class="row">
+    <div class="col-md-4 highlight-item">
+      <a href="link-1.html">
+        <div class="highlight-image-container">
+          <img src="../static/img/career1.jpg" alt="Image 1" class="highlight-image">
+        <div class="highlight-text">Sotia 'o e Ta'u</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-2.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/career2.jpg" alt="Image 2" class="highlight-image">
+        <div class="highlight-text">Akotau Tafakula</div>
+         </div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-3.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/career4.jpg" alt="Image 3" class="highlight-image">
+        <div class="highlight-text">Lavame'a he ako Ofisa</div>
+         </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="cta-container">
+    <a href="{{ url_for('news') }}" class="cta-button">Ngaahi Ongoongo Fakamuimui</a>
+  </div>
+</div>
+<div class="highlights-section">
+  <h2 class="title-highlight">OKU KE FAKA'AMU KEKE HOKO KOHA MEMIPA 'O E KAU TAU?</h2>
+  <div class="row">
+    <div class="col-md-4 highlight-item">
+      <a href="link-1.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/trg1.jpg" alt="Image 1" class="highlight-image">
+              </div>
+        <div class="highlight-text">Pole ki he Ka'ate Faka-Tu'i.</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-2.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/rtm1.jpg" alt="Image 2" class="highlight-image">
+              </div>
+        <div class="highlight-text">Pole ki he Malini Faka-Tu'i</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-3.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/navy1.jpg" alt="Image 3" class="highlight-image">
+              </div>
+        <div class="highlight-text">Pole ki he Tautahi Faka-Tu'i</div>
+      </a>
+    </div>
+  </div>
+  <div class="cta-container">
+    <a href="{{ url_for('careers') }}" class="cta-button">Fakasio ha'o lakanga</a>
+  </div>
+</div>
+
+<section class="video-container">
+  <div class="video-overlay"></div>
+  <video controls autoplay loop muted>
+    <source src="../static/vdo/rimpac.mp4" type="video/mp4">
+  </video>
+  <div class="video-text">
+    <h1>Halanga faingamalie ki ha'o lakanga</h1>
+    <p>Te mau tataki koe ke ke fili ho lakanga totonu.</p>
+    <a href="#" class="btn btn-primary">Fakaikiiki</a>
+  </div>
+</section>
+<div class="highlights-section">
+  <h2 class="title-highlight"></h2>
+  <div class="row">
+    <div class="col-md-4 highlight-item">
+      <a href="link-1.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/recruit.jpg" alt="Image 1" class="highlight-image">
+              </div>
+        <div class="highlight-text">Ngaahi makatu'unga.</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-2.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/recruit1.jpg" alt="Image 2" class="highlight-image">
+              </div>
+        <div class="highlight-text">Founga keke mateuteu ai</div>
+      </a>
+    </div>
+    <div class="col-md-4 highlight-item">
+      <a href="link-3.html">
+          <div class="highlight-image-container">
+        <img src="../static/img/partnership2.jpg" alt="Image 3" class="highlight-image">
+              </div>
+        <div class="highlight-text">Ngaahi fehu'i lahi hono 'eke</div>
+      </a>
+    </div>
+  </div>
+  <div class="cta-container">
+    <a href="{{ url_for('join_us') }}" class="cta-button">Fakafonu e foomu</a>
+  </div>
+</div>
+<!--Footer--!>
+
+<footer class="bg-dark text-white py-3 mt-5">
+  <div class="container">
+    <div class="row footer-row">
+      <div class="col-md-4 text-right">
+        <img src="../static/img/logo2.gif" alt="Logo" class="footer-logo">
+        <p class="footer-address">
+          His Majesty's Armed Forces<br>
+          Vilai Barracks<br>
+          Vaha'akolo Road<br>
+          Nuku'alofa, Tonga
+        </p>
+      </div>
+      <div class="col-md-4 text-center.">
+        <h3 class="footer-title">Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">How to Join</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-right">
+        <h3 class="footer-title">Connect with Us</h3>
+        <p>Phone Number: (676) 23-099</p>
+        <p>Email: info@hmaf.gov.to</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row footer-bottom-row mt-3">
+  <div class="col-md-12 text-center">
+    <p>&copy; <span id="current-year"></span> His Majesty's Armed Forces. All rights reserved.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Terms of Use</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</footer>
+
+<!-- Link to JavaScript file -->
+<script src="../static/js/script.js"></script>
+
+<!-- For the current year in the copyright section at the footer -->
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Add these lines right before the closing </body> tag -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function () {
+  function updateSubmenuDisplay() {
+    if ($(window).width() <= 991.98) {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "flex");
+    } else {
+      $("#about-us-submenu .sub-dropdown-menu").css("display", "none");
+    }
+  }
+
+  $("#hamburgerButton").on("click", function () {
+    var slideoutMenu = $(".slideout-menu");
+    var listIcon = $(this).find(".bi-list");
+    var xIcon = $(this).find(".bi-x");
+
+    listIcon.toggle();
+    xIcon.toggle();
+    slideoutMenu.toggleClass("active");
+
+    if (slideoutMenu.hasClass("active")) {
+      slideoutMenu.css("display", "block");
+    } else {
+      setTimeout(function() {
+        slideoutMenu.css("display", "none");
+      }, 300);
+    }
+  });
+
+  $(".nav-item").hover(
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "flex");
+      }
+    },
+    function() {
+      if (!$(".slideout-menu").hasClass("active")) {
+        $(this).find(".sub-dropdown-menu").css("display", "none");
+      }
+    }
+  );
+});
+
+$(document).ready(function() {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+$(window).on("resize load", function() {
+  updateSubmenuDisplay();
+});
+
+</script>
+
+</body>
+</html>
