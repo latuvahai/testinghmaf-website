@@ -1,0 +1,1018 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #002200, #1A1D2B);
+  position: relative; /* Add this line to make sure the pseudo-element is positioned correctly */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/background9.gif');
+  background-repeat: repeat; /* options are repeat, no-repeat, repeat-x, repeat-y, space, round */
+  background-size: cover; /* options are cover, contain, auto, inherit */
+  background-position: center;
+  opacity: 0.1; /* the more the number the more visible the layer */
+  z-index: -1; /* negative means it will be behind other content */
+}
+
+/* Header */
+.header {
+    padding: 10px 30px;
+    position: relative;
+
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navbar-nav li {
+    display: inline-block;
+}
+
+.navbar-nav li a {
+    padding: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.navbar-nav li a:hover {
+    text-decoration: underline;
+    color: #b8860b;
+}
+
+.nav-item.dropdown {
+    position: relative;
+}
+
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #1a1a1a;
+    width: 100%;
+}
+
+.custom-hamburger {
+    font-size: 24px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* Search and language options */
+.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.d-flex.align-items-center input[type="search"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-form .form-control {
+    width: 200px;
+    height: 2rem;
+    font-size: 15px;
+
+}
+
+.search-form .btn {
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+
+}
+.search-form .btn:hover {
+  box-shadow: none;
+  background-image: linear-gradient(135deg, #b3b3b3 0%, #808080 100%);
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.language-options a {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.language-options a:hover {
+    text-decoration: underline;
+    color: #b8860b;
+}
+
+/* Main content */
+main {
+    padding: 50px;
+    margin-top: 80px;
+}
+.my-container h4 {
+  font-size: 20px;
+  color: black;
+}
+
+.title-large {
+  font-size: 48px; /* Adjust the value to your desired font size */
+  font-weight: bold; /* Add this line to make the text bold */
+}
+
+
+.my-container p {
+  font-size: 16px;
+  color: black;
+
+}
+.my-container {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #D3D3D3;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 40px;
+  z-index: 1; /* set the z-index for my-container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.my-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/transparent4.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  opacity: 0.1; /* set the opacity for the background image */
+  z-index: -1; /* set the z-index for the background image */
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+}
+.title-highlight {
+  font-size:36px;
+  font-weight: bold;
+  margin-top: 40px; /* Add space above the heading */
+  margin-bottom: 40px; /* Add space below the heading */
+  text-align: center; /* Center the heading */
+  color: #fff; /* Change the text color to white */
+}
+
+.highlight-item {
+  position: relative;
+  padding: 0;
+  margin-right: 15px; /* Add space between columns */
+  margin-left: 15px;
+  width: 33.333%;
+}
+
+.highlight-item a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  overflow: hidden; /* Ensure the glowing border stays within the item */
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect to the text */
+  padding: 5px; /* Add padding around the text */
+}
+
+.highlight-image-container {
+  width: 100%;
+  height: 300px;
+  position: relative; /* add this to make the child element position absolute */
+  overflow:hidden;
+  /*transition: opacity 0.3s, transform 0.3s;*/
+}
+
+.highlight-image-container::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.highlight-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity:0.4;
+  /*z-index: -1;*/
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.highlight-text {
+  font-size:24px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center;
+  color: #fff;
+  transition: color 0.3s; /* Smooth the transition when hovering */
+}
+
+.highlight-item a:hover .highlight-image {
+  opacity: 1; /* Lighten the image to its normal brightness */
+  transform: scale(1.3);
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  overflow: hidden; /* Ensure the glowing border stays within the item */
+  position: relative;
+
+}
+
+.highlight-item:hover .highlight-text {
+  color: yellow; /* Change the text color when hovering */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect to the text */
+  background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent black background */
+  padding: 2px; /* Add padding around the text */
+}
+
+.highlight-item a:hover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px dashed yellow;
+  border-radius: 10px;
+  box-sizing: border-box;
+  /*background-image: radial-gradient(circle at center, rgba(255, 255, 0, 0.5) 0%, transparent 70%, transparent 100%);
+  transition: box-shadow 0.3s;*/
+}
+.cta-container {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: maroon;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  border:none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #b8860b;
+}
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: none;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-bottom-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  max-width: 70px;
+  margin-bottom: 20px;
+}
+
+.footer-address {
+  line-height: 1.5;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #b8860b;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #b8860b;
+}
+
+.list-inline-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.list-inline-item a:hover {
+  text-decoration: underline;
+  color: #b8860b;
+}
+
+.list-inline {
+    display: inline-flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 10px;
+}
+
+/* Videos */
+.video-container {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 53.25%; /* 16:9 aspect ratio*/
+}
+
+.video-container video {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.video-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  text-align: center;
+  color: yellow;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.video-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.video-text p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: none;
+  text-decoration: none;
+  border:none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: maroon !important;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #b8860b !important;
+  text-decoration: none;
+  color: #fff;
+}
+/*Dropdown menu*/
+
+.sub-dropdown-column {
+    text-align: left;
+    position: relative;
+}
+
+.sub-dropdown-column:not(:last-child)::after {
+    background-color: white;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+}
+
+.sub-dropdown-menu {
+    background-color: white;
+    display: none;
+    left: 0;
+    padding: 12px 16px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    position: relative;
+}
+
+.sub-dropdown-menu img {
+    display: block;
+    height: 200px;
+    width: 300px;
+    padding: 30px;
+}
+
+.sub-dropdown-column .nav-link {
+    top: 100px; /* Adjust the value as needed */
+}
+
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-item a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-item.visible .sub-dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    color: white;
+    display: block;
+    flex: 1;
+    padding: 10px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+/* Slide-out menu */
+.slideout-menu .nav-item:hover .sub-menu-container {
+    display: block;
+    z-index: 9998
+}
+
+.slideout-menu .sub-dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%; /* Make the dropdown menu take up the full width */
+    flex-wrap: nowrap; /* Allow items to wrap onto multiple lines */
+    align-items: flex-start; /* Align items to the top of the container */
+    justify-content: space-between;
+}
+
+.slideout-menu .sub-menu-container .sub-dropdown-column {
+    flex: 0;
+}
+
+.slideout-menu .sub-menu-container .sub-dropdown-column:last-child {
+    margin-right: 0;
+}
+
+.slideout-menu .sub-menu-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    position: fixed;
+    left: 1rem;
+    display: none;
+    justify-content: space-between;
+    background-color: #1a1a1a; /* Add background-color to cover the slideout-menu */
+    z-index: -1; /* Add z-index to position it below the slideout-menu */
+    /*height: 70vh; /* Adjust the height to fit your desired height */
+}
+
+.slideout-menu {
+    position: fixed;
+    top: -425px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    height: 500px;
+    /*overflow-y: auto;*/
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    display: none;
+
+}
+
+.slideout-menu.active {
+    transform: translateY(calc(100% + 1rem));
+    display: block;
+}
+
+.slideout-menu-list .nav-item {
+    position: relative;
+    padding: 1rem 0;
+    flex: 0.1;
+    display: flex;
+    justify-content: center;
+}
+
+.slideout-menu-list .nav-item a{
+    text-decoration: none;
+    color: white;
+}
+.slideout-menu-list .nav-item a:hover {
+    text-decoration: underline;
+    color: #b8860b;
+}
+
+.slideout-menu-list .nav-item:hover .sub-dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slideout-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+/*Form Style*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.submit-container {
+    position: relative;
+}
+
+#message-container {
+    display: none;
+    position: absolute;
+    left: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+#message-text {
+    color: #000;
+}
+
+.form-label {
+  color: #ffffff;
+  display: block;
+  width: 100%;
+}
+.form-instructions {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.custom-input {
+  width: 70%; /* Change this value to your desired width */
+  height: 30px;
+}
+.custom-inquiry {
+  width: 70%; /* Change this value to your desired width */
+  height: 100px;
+}
+/* Add this to your existing CSS file */
+.header-section {
+  background-image: url('../img/silhouette3.jpg');
+  background-size: contain;
+  background-position: center;
+  height: 600px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+}
+
+.header-text {
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better text visibility */
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.header-text h1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.header-text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+/* Career page */
+/* Choose Your Journey Section */
+.journey-section {
+  background-color: none;
+  color: white;
+  text-align: center;
+  width: 100%;
+  background-image: none;
+  background-size: contain;
+  background-position: center;
+  height: 200px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.journey-section h2,
+.journey-section p {
+  margin-bottom: 20px;
+}
+
+/* High Priority Roles Section */
+.high-priority-section {
+  background-color: rgba(0, 50, 75, 0.5); /* Change the background color to a bluish-green color with 0.4 opacity */
+  width: 80%;
+  border-radius: 20px;
+  padding: 20px 20px 20px 0px;
+  margin: 0 auto; /* Add this line to center the section on the screen */
+
+}
+
+.high-priority-section h2,
+.high-priority-section p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.priority-role {
+  position: relative;
+}
+
+.priority-role img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px; /* Adds rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Adds a subtle box-shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effect for hover */
+}
+
+.priority-column {
+  padding: 0 15px;
+}
+
+.priority-role img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.4); /* Increases the box-shadow on hover */
+}
+
+.priority-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* List of jobs per Unit */
+.choose-career-section {
+  margin: 50px 0;
+}
+
+.career-heading {
+  color: white;
+  padding-top: 20px; /* Adjust this value to add more or less space on the top */
+  padding-bottom: 20px; /* Adjust this value to add more or less space on the bottom */
+}
+
+.career-info-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Adds a subtle box-shadow */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Add this property to allow the content to wrap */
+  align-items: center;
+  position: relative;
+  width: 980px; /* Adjust this value to your desired width */
+  margin: 0 auto; /* Centers the container horizontally */
+  margin-bottom: 30px; /* Add this line to create spacing between the boxes */
+
+}
+
+.job-list-wrapper {
+  width: 100%; /* Add this to ensure the job list takes up the full width */
+}
+
+.career-info-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+
+}
+
+.career-info-content {
+  flex-grow: 1;
+  position: relative;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px; /* Add this line to increase the size of the button */
+}
+
+.job-list {
+  display: none;
+  padding: 20px 20px 20px 200px; /* top, right, bottom, left */
+  }
+
+.job-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Add this to make the lists side by side */
+  vertical-align: top; /* Align the lists to the top */
+}
+
+.job-list ul:not(:first-child) {
+  margin-left: 400px; /* Add some space between the columns */
+}
+
+.career-info-content {
+  margin-left: 20px;
+}
+
+.job-list li {
+  margin-bottom: 5px;
+}
+
+.job-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.job-list a:hover {
+  text-decoration: underline;
+}
+
+/* Style the horizontal line separator */
+hr {
+  border: 2px;
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*News Styles*/
+
+.section-title {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 100px
+}
+
+.news-card {
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: box-shadow .3s ease;
+  display:flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-card:hover {
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.news-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.news-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.pagination .page-item {
+  margin: 0 10px; /* Adjust as per your needs for spacing between items */
+}
+
+
+.page-item .page-link {
+  color: white;
+}
+
+/*Media*/
+@media (max-width: 991.98px) {
+    .horizontal-dropdown {
+        display: block;
+    }
+
+    .sub-dropdown-column {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .navbar-nav,
+    .dropdown-menu {
+        display: none;
+    }
+
+    .sub-dropdown-column {
+        width: 100%;
+    }
+}
